@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Akanksha W"/>
+    <meta name="description" content="Lab-1"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!--<link rel= "stylesheet" href="styles.css">-->
+    <script src="modernizr-custom.js"></script>
+    <title>Float</title>
+    <style>
+        html, body {
+            font: mallory,Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .rootContainer {
+            background: linear-gradient(#f68a73,#ffdf8f);
+            /* background-color: #f68a73; */
+            width: 100%;
+            display: flow-root;
+        }
+        .nav-bar {
+            width: 80%;
+            float: left
+        }
+        .logo-heading {
+            float: left;
+            color: grey;
+            font-size: 24px;
+            border-right: 1px solid grey;
+            padding: 5px;
+        }
+        .nav-bar::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        ul {
+            list-style-type: none;
+            display: inline;
+        }
+        li {
+            float: left;
+            margin-left:  75px;
+            padding-top: 2px;
+        }
+        .login {
+            float: right;
+            border: 1px solid blue;
+            color: blue;
+            margin: 5px;
+        }
+        .column {
+            background: linear-gradient(#f68a73,#ffdf8f);
+            width: 50%;
+            height:100%;
+            float: left;
+        }
+        .left-container.text {
+            color: white;
+            font-size: 32px;
+        }
+        .form-fields {
+            width: 60%;
+            padding: 20%;
+        }
+        .input-field {
+            width: 100%;
+            margin-bottom: 3px;
+            height: 50px;
+            background: white;
+        }
+        input {
+            border: none;
+        }
+        .box1-left, .box1-right {
+            width: 45%;
+            float: left;
+            border: 1px solid black;
+            margin: 2px;
+            background: #577CDA;
+        }
+        .box1-right {
+            background: #FCC5F5;
+        }
+        .search-field {
+            margin-left: 100px;
+            margin-top: 15px;
+        }
+        .box1::after, .content::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .content-left {
+            width: 60%;
+            color: white;
+            margin: 33px auto;
+            text-align: center;
+        }
+        .content-box2 {
+            /* width: 60%; */
+            color: white;
+            margin: 33px auto;
+            text-align: center;
+        }
+        .text1{
+            font-size: 25px;
+        }
+        .text2{
+            font-size: 32px;
+        }
+        .text3{
+            font-size: 14px;
+        }
+        .deals {
+            background: white;
+            color: #3B50BE;
+            border: 1px solid #3B50BE;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            padding-top: 17px;
+        }.today {
+            background: white;
+            border: 1px solid;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .deals.right {
+            border: 1px solid #F256DE;
+            color: #F256DE;
+        }
+        .box2 {
+            background: hsla(0,0%,100%,.5);
+            width: 80%;
+            margin: 28px auto;
+        }
+        .calendar {
+            width: 80%;
+            
+        }
+        .calendar-day, .calendar-date {
+            width: 50%;
+            display: inline;
+            margin: 10px auto;
+            padding: 10px;
+            color: grey;
+        }
+        header, footer {
+            clear: both;
+            text-align: center;
+        }
+        footer {
+            background: black;
+            color: white;
+        }
+
+
+
+        .box11, .box22,.box33 {
+            width: 30%;
+            margin-left: 12px;
+            float: left;
+            background: white;
+            border: 0.5px solid lightgrey;
+            border-bottom: 5px solid blue;
+        }
+        
+        .box11 p, .box22 p,.box33 p{
+            padding: 10px;
+        }
+        .image {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            
+                <div class="nav-bar">
+                    <span class="logo-heading">Agoda</span>
+                    <ul>
+                        <li>Rooms</li>
+                        <li>Flight</li>
+                        <li>Airport Transfers</li>
+                    </ul>
+                </div>
+                <div class="login">
+                    Login
+                </div>
+            
+        </header>
+        <div class="content">
+            <div class="rootContainer">
+                <section class="column">
+                <div class="leftContainer">
+                    <section class="form-fields">
+                        <div class="left-container text">
+                            Hotels, Homes, Hostels and More
+                        </div>
+                        <div class="input-field">
+                            <i class="far fa-search"></i>
+                            <input class="search-field" type="search" placeholder="Search your destination">
+                        </div>
+                        <div class="input-field">
+                            <span class="calendar">
+                            <p class="calendar-date">
+                                24th Nov 2018
+                            </p>
+                            <p class="calendar-day">Saturday</p>
+                        </span>
+                        <span class="calendar">
+                                <p class="calendar-date">
+                                    25th Nov 2018
+                                </p>
+                                <p class="calendar-day">Sunday</p>
+                            </span>
+                        </div>
+                        
+                        <input type="search" placeholder="Search your destination">
+                    </section>
+                </div>
+                </section>
+                <section class="column">
+                <div class="rightContainer">
+                    <section class="static-images">
+                        <div>
+                            
+                        </div>
+                        <div class="images">
+                            <div class="box1">
+                                <div class="box1-left">
+                                    <div class="content-left">
+                                    <p class="text1">
+                                        SAVE AN EXTRA
+                                    </p>
+                                    <p class="text2">
+                                        10%
+                                    </p>
+                                    <div class="deals"> VIEW TODAY'S DEALS</div>
+                                </div>
+                                </div>
+                                <div class="box1-right">
+                                        <div class="content-left">
+                                                <p class="text1">
+                                                    BECOME AN HOST
+                                                </p>
+                                                <p class="text3">
+                                                        List your place on Agoda Homes.
+                                                        Pay no commissions or fees, ever.
+                                                </p>
+                                                <div class="deals right">LIST YOUR PLACE TODAY</div>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="box2">
+                                    <div class="content-box2">
+                                            <p class="text1">
+                                                TODAY's DEALS
+                                            </p>
+                                            
+                                            <div class="today">LIST YOUR PLACE TODAY</div>
+                                            <div class="today">LIST YOUR PLACE TODAY</div>
+                                        </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+            </div>
+            <div class="container">
+                    <header>
+                        <h2>Overheard from travellers</h2>
+                    </header>
+                    <div class="content">
+                        <div class="box11">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            </p>
+                        </div>
+                        <div class="box22">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                            </p>
+                        </div>
+                        <div class="box33">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                            
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="container">
+                    <header>
+                        <h2>Most Popular Destinations</h2>
+                    </header>
+                    
+                    <ul class="img-grid">
+                            <li class="img-list">
+                                <img src="images/holiday1.jpg" alt="placeholder" class="image">
+                            </li>
+                            <li class="img-list">
+                                <img src="images/holiday2.jpg" alt="placeholder" class="image">
+                            </li>
+                            <li class="img-list">
+                                <img src="images/holiday3.jpg" alt="placeholder" class="image">
+                            </li>
+                            <li class="img-list">
+                                <img src="images/holiday1.jpg" alt="placeholder" class="image">
+                            </li>
+                            <li class="img-list">
+                                <img src="images/holiday2.jpg" alt="placeholder" class="image">
+                            </li>
+                            <li class="img-list">
+                                <img src="images/holiday3.jpg" alt="placeholder" class="image">
+                            </li>
+                                
+                        </ul>
+                </div>
+        </div>
+        <footer>
+            <h6>Footer</h6>
+        </footer>
+    </div>
+</body>
+</html>
