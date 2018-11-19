@@ -9,14 +9,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <!--<link rel= "stylesheet" href="styles.css">-->
     <script src="modernizr-custom.js"></script>
-    <title>Float</title>
+    <title>Booking Website</title>
     <style>
         html, body {
             font: mallory,Helvetica Neue,Helvetica,Arial,sans-serif;
         }
         .rootContainer {
-            background: linear-gradient(#f68a73,#ffdf8f);
+            /* background: linear-gradient(#0066ff,#66ccff); */
             /* background-color: #f68a73; */
+            background: linear-gradient(to top, steelblue, darkslateblue 90%);
             width: 100%;
             display: flow-root;
         }
@@ -36,11 +37,14 @@
             clear: both;
             display: block;
         }
-        ul {
+        .nav-list, .img-grid, .main-list, .sub-list {
             list-style-type: none;
             display: inline;
         }
-        li {
+        .main-list {
+            width:20%;
+        }
+        .nav-list-item, .img-list {
             float: left;
             margin-left:  75px;
             padding-top: 2px;
@@ -52,7 +56,8 @@
             margin: 5px;
         }
         .column {
-            background: linear-gradient(#f68a73,#ffdf8f);
+            /* background: linear-gradient(#0066ff,#66ccff); */
+            background: linear-gradient(to top, steelblue, darkslateblue 90%);
             width: 50%;
             height:100%;
             float: left;
@@ -63,7 +68,7 @@
         }
         .form-fields {
             width: 60%;
-            padding: 20%;
+            padding: 18%;
         }
         .input-field {
             width: 100%;
@@ -71,13 +76,25 @@
             height: 50px;
             background: white;
         }
+        .button-fields {
+            width: 60%;
+            height: 50px;
+            background: white;
+            float: left;
+        }
+        .button{
+            margin-left: 5px;
+            height: 50px;
+            width: 38%;
+            border-radius: 10px;
+        }
         input {
             border: none;
         }
         .box1-left, .box1-right {
             width: 45%;
             float: left;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             margin: 2px;
             background: #577CDA;
         }
@@ -123,11 +140,12 @@
             text-align: center;
             padding-top: 17px;
         }.today {
-            background: white;
+            background: #577CDA;
             border: 1px solid;
             width: 200px;
             height: 200px;
             display: inline-block;
+            margin-bottom: 20px;
         }
         .deals.right {
             border: 1px solid #F256DE;
@@ -139,8 +157,11 @@
             margin: 28px auto;
         }
         .calendar {
-            width: 80%;
-            
+            width: 49%;
+            float: left;
+            height: 35px;
+            padding-top: 15px;
+            padding-left: 4px;         
         }
         .calendar-day, .calendar-date {
             width: 50%;
@@ -153,13 +174,7 @@
             clear: both;
             text-align: center;
         }
-        footer {
-            background: black;
-            color: white;
-        }
-
-
-
+        
         .box11, .box22,.box33 {
             width: 30%;
             margin-left: 12px;
@@ -176,6 +191,45 @@
             width: 150px;
             height: 150px;
         }
+        .travel {
+            height: 120px;
+            width: 100%;
+        }
+        .links, .countries, .social-links {
+            width: 100%;
+            /* height: 100px; */
+        }
+        .links {
+            background: lightgrey;
+            
+            height: 150px;
+        }
+        .links div{
+            display: flex
+        }
+        dl {
+            width: 20%;
+        }
+        dt {
+            font-weight: bold;
+        }
+        dd {
+            margin-inline-start: 0;
+        }
+        .countries{
+            background: white;
+        }
+        .countries div {
+            height: 100px;
+            display: flex;
+            margin: 50px;
+        }
+        .social-links {
+            background: black;
+            height: 100px;
+            color: lightgrey;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -184,10 +238,10 @@
             
                 <div class="nav-bar">
                     <span class="logo-heading">Agoda</span>
-                    <ul>
-                        <li>Rooms</li>
-                        <li>Flight</li>
-                        <li>Airport Transfers</li>
+                    <ul class="nav-list">
+                        <li class="nav-list-item">Rooms</li>
+                        <li class="nav-list-item">Flight</li>
+                        <li class="nav-list-item">Airport Transfers</li>
                     </ul>
                 </div>
                 <div class="login">
@@ -208,23 +262,29 @@
                             <input class="search-field" type="search" placeholder="Search your destination">
                         </div>
                         <div class="input-field">
-                            <span class="calendar">
+                            <div class="calendar" style="border-right: 1px solid grey">
                             <p class="calendar-date">
                                 24th Nov 2018
                             </p>
                             <p class="calendar-day">Saturday</p>
-                        </span>
-                        <span class="calendar">
+                        </div>
+                        <div class="calendar">
                                 <p class="calendar-date">
                                     25th Nov 2018
                                 </p>
                                 <p class="calendar-day">Sunday</p>
-                            </span>
+                            </div>
                         </div>
                         
-                        <input type="search" placeholder="Search your destination">
+                        <div class="button-fields">
+                            
+                            <input class="dropdown" type="search" placeholder="Search your destination">
+                            
+                        </div>
+                        <button class="button" type="button">Search</button>
                     </section>
                 </div>
+                <img src="images/travel.jpg" alt="travel" class="travel"/>
                 </section>
                 <section class="column">
                 <div class="rightContainer">
@@ -264,8 +324,22 @@
                                                 TODAY's DEALS
                                             </p>
                                             
-                                            <div class="today">LIST YOUR PLACE TODAY</div>
-                                            <div class="today">LIST YOUR PLACE TODAY</div>
+                                            <div class="today">
+                                                <p class="text1">
+                                                    SAVE AN EXTRA
+                                                </p>
+                                                <p class="text2">
+                                                    10%
+                                                </p>
+                                            </div>
+                                            <div class="today">
+                                                <p class="text1">
+                                                    SAVE AN EXTRA
+                                                </p>
+                                                <p class="text2">
+                                                    10%
+                                                </p>
+                                            </div>
                                         </div>
                             </div>
                         </div>
@@ -328,7 +402,109 @@
                 </div>
         </div>
         <footer>
-            <h6>Footer</h6>
+            <div class="links">
+                <div>
+                    <dl class"main-list">
+                        <dt class="main-list-item">
+                            Help
+                            </dt>
+                            
+                                <dd class="sub-list-item">Contact us</dd>
+                                <dd class="sub-list-item">FAQs</dd>
+                                <dd class="sub-list-item">Privacy policy</dd>
+                                <dd class="sub-list-item">Cookie policy</dd>
+                                <dd class="sub-list-item">Term of use</dd>
+                            
+                    </dl>
+                    <dl class"main-list">
+                        <dt class="main-list-item">
+                            About us
+                        </dt>
+                                <dd class="sub-list-item">PointsMAX</dd>
+                                <dd class="sub-list-item">Careers</dd>
+                                <dd class="sub-list-item">Press</dd>
+                                <dd class="sub-list-item">Blog</dd>
+                    </dl>
+                    <dl class"main-list">
+                        <dt class="main-list-item">
+                            Destinations
+                        </dt>
+                                <dd class="sub-list-item">Countries</dd>
+                                <dd class="sub-list-item">Cities</dd>
+                    </dl>
+
+                    <dl class"main-list">
+                        <dt class="main-list-item">
+                            Partner with us
+                        </dt>
+                                <dd class="sub-list-item">Properties</dd>
+                                <dd class="sub-list-item">Affiliates</dd>
+                                
+                    </dl>
+                    <dl class"main-list">
+                        <dt class="main-list-item">
+                            Get the app
+                        </dt>
+                                <dd class="sub-list-item">iOS app</dd>
+                                <dd class="sub-list-item">Android app</dd>
+                                
+                    </dl>
+                    
+                </div>
+            </div>
+            <div class="countries">
+                    <div>
+                            <dl class"main-list">
+                                <dt class="main-list-item">
+                                    Help
+                                    </dt>
+                                    
+                                        <dd class="sub-list-item">Contact us</dd>
+                                        <dd class="sub-list-item">FAQs</dd>
+                                        <dd class="sub-list-item">Privacy policy</dd>
+                                        <dd class="sub-list-item">Cookie policy</dd>
+                                        <dd class="sub-list-item">Term of use</dd>
+                                    
+                            </dl>
+                            <dl class"main-list">
+                                <dt class="main-list-item">
+                                    About us
+                                </dt>
+                                        <dd class="sub-list-item">PointsMAX</dd>
+                                        <dd class="sub-list-item">Careers</dd>
+                                        <dd class="sub-list-item">Press</dd>
+                                        <dd class="sub-list-item">Blog</dd>
+                            </dl>
+                            <dl class"main-list">
+                                <dt class="main-list-item">
+                                    Destinations
+                                </dt>
+                                        <dd class="sub-list-item">Countries</dd>
+                                        <dd class="sub-list-item">Cities</dd>
+                            </dl>
+        
+                            <dl class"main-list">
+                                <dt class="main-list-item">
+                                    Partner with us
+                                </dt>
+                                        <dd class="sub-list-item">Properties</dd>
+                                        <dd class="sub-list-item">Affiliates</dd>
+                                        
+                            </dl>
+                            <dl class"main-list">
+                                <dt class="main-list-item">
+                                    Get the app
+                                </dt>
+                                        <dd class="sub-list-item">iOS app</dd>
+                                        <dd class="sub-list-item">Android app</dd>
+                                        
+                            </dl>
+                            
+                        </div>
+            </div>
+            <div class="social-links">
+                    <p class="Copyrights-agoda">All material herein © 2005 – 2018 Agoda Company Pte. Ltd., All Rights Reserved.</p>
+            </div>
         </footer>
     </div>
 </body>
