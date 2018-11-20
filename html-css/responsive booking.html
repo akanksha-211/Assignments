@@ -25,6 +25,19 @@
             width: 80%;
             float: left
         }
+        @media (min-width: 360px) and (max-width: 767px) {
+            .logo-heading {
+                float: none !important;
+            }
+            .logo-heading, .nav-list {
+                display: block !important;
+            }
+            .nav-list-item {
+                margin-left: 3% !important;
+                float: none !important;
+                display: inline;
+            }
+        }
         .logo-heading {
             float: left;
             color: grey;
@@ -238,7 +251,7 @@
         <header>
             
                 <div class="nav-bar">
-                    <span class="logo-heading">Agoda</span>
+                    <div class="logo-heading">Agoda</div>
                     <ul class="nav-list">
                         <li class="nav-list-item">Rooms</li>
                         <li class="nav-list-item">Flight</li>
@@ -250,7 +263,7 @@
                 </div>
             
         </header>
-        <div class="content">
+        <!-- <div class="content">
             <div class="rootContainer">
                 <section class="column">
                 <div class="leftContainer">
@@ -506,7 +519,7 @@
             <div class="social-links">
                     <p class="Copyrights-agoda">All material herein © 2005 – 2018 Agoda Company Pte. Ltd., All Rights Reserved.</p>
             </div>
-        </footer>
+        </footer> -->
     </div>
 </body>
 </html>
