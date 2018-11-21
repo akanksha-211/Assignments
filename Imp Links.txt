@@ -5,3 +5,5 @@ https://www.w3.org/standards/webdesign/accessibility
 https://labs.jensimmons.com/
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+
+https://martinfowler.com/
