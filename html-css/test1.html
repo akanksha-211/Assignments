@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test1</title>
+    <style>
+    .main, .side {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  box-sizing: border-box;
+}
+.container{
+  border: 5px solid yellow;
+}
+.main{
+  background:red;
+}
+.side{
+  background: blue;
+}
+.container::after{
+  content:"";
+  clear: both;
+  display:block;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="main">
+        
+        Main
+        </div>
+        <div class="side">
+        Side
+        </div>
+        </div>
+</body>
+</html>
